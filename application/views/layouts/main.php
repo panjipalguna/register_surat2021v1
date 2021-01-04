@@ -218,7 +218,7 @@
             </div>
             <!-- /.content-wrapper -->
             <footer class="main-footer">
-                <strong> <a href="http:///">CRUDigniter</a> 3.2</strong>
+                <strong> <a href="http:///"></a> </strong>
             </footer>
 
             <!-- Control Sidebar -->
