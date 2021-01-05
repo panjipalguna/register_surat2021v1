@@ -29,10 +29,12 @@ class Undangan_wakil extends CI_Controller{
     {   
         if(isset($_POST) && count($_POST) > 0)     
         {   
+            $temp1 = $this->input->post('tanggal');  
             $params = array(
 				'dari' => $this->input->post('dari'),
-				'no_surat' => $this->input->post('no_surat'),
-				'tanggal' => $this->input->post('tanggal'),
+                'no_surat' => $this->input->post('no_surat'),
+                'tanggal' => date('Y-m-d', strtotime($temp1)),
+				// 'tanggal' => $this->input->post('tanggal'),
 				'uraian' => $this->input->post('uraian'),
 				'keterangan' => $this->input->post('keterangan'),
 				'upload_foto' => $this->input->post('upload_foto'),
@@ -60,10 +62,12 @@ class Undangan_wakil extends CI_Controller{
         {
             if(isset($_POST) && count($_POST) > 0)     
             {   
+                $temp1 = $this->input->post('tanggal');  
                 $params = array(
 					'dari' => $this->input->post('dari'),
-					'no_surat' => $this->input->post('no_surat'),
-					'tanggal' => $this->input->post('tanggal'),
+                    'no_surat' => $this->input->post('no_surat'),
+                    'tanggal' => date('Y-m-d', strtotime($temp1)),
+					// 'tanggal' => $this->input->post('tanggal'),
 					'uraian' => $this->input->post('uraian'),
 					'keterangan' => $this->input->post('keterangan'),
 					'upload_foto' => $this->input->post('upload_foto'),

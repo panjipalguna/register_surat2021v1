@@ -29,11 +29,15 @@ class Register_wakil extends CI_Controller{
     {   
         if(isset($_POST) && count($_POST) > 0)     
         {   
+            $temp1 = $this->input->post('tanggal_masuk');
+            $temp2 = $this->input->post('tanggal_surat');
             $params = array(
-				'tanggal_masuk' => $this->input->post('tanggal_masuk'),
+                'tanggal_masuk' => date('Y-m-d', strtotime($temp1)),
+				// 'tanggal_masuk' => $this->input->post('tanggal_masuk'),
 				'asal_surat' => $this->input->post('asal_surat'),
-				'no_surat' => $this->input->post('no_surat'),
-				'tanggal_surat' => $this->input->post('tanggal_surat'),
+                'no_surat' => $this->input->post('no_surat'),
+                'tanggal_surat' => date('Y-m-d', strtotime($temp2)),
+				// 'tanggal_surat' => $this->input->post('tanggal_surat'),
 				'perihal' => $this->input->post('perihal'),
 				'kode' => $this->input->post('kode'),
 				'keterangan' => $this->input->post('keterangan'),
@@ -61,12 +65,16 @@ class Register_wakil extends CI_Controller{
         if(isset($data['register_wakil']['no_urut']))
         {
             if(isset($_POST) && count($_POST) > 0)     
-            {   
+            {
+                $temp1 = $this->input->post('tanggal_masuk');
+                $temp2 = $this->input->post('tanggal_surat');   
                 $params = array(
-					'tanggal_masuk' => $this->input->post('tanggal_masuk'),
+                    'tanggal_masuk' => date('Y-m-d', strtotime($temp1)),
+					// 'tanggal_masuk' => $this->input->post('tanggal_masuk'),
 					'asal_surat' => $this->input->post('asal_surat'),
-					'no_surat' => $this->input->post('no_surat'),
-					'tanggal_surat' => $this->input->post('tanggal_surat'),
+                    'no_surat' => $this->input->post('no_surat'),
+                    'tanggal_surat' => date('Y-m-d', strtotime($temp2)),
+					// 'tanggal_surat' => $this->input->post('tanggal_surat'),
 					'perihal' => $this->input->post('perihal'),
 					'kode' => $this->input->post('kode'),
 					'keterangan' => $this->input->post('keterangan'),
